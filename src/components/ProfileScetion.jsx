@@ -40,7 +40,7 @@ const ProfileScetion = () => {
                 />
                 <AvatarFallback>A</AvatarFallback>
               </Avatar>
-              <span className="text-sm font-medium">Welcome Ankit</span>
+              <span className="text-sm font-medium hidden sm:inline-block">Welcome Ankit</span>
             </Button>
           </DialogTrigger>
           <DialogContent className="sm:max-w-[425px]">
