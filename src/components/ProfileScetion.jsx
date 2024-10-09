@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { signOut } from "next-auth/react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
@@ -57,7 +58,7 @@ const ProfileScetion = () => {
               <h2 className="text-xl font-semibold">Ankit</h2>
               <p className="text-sm text-muted-foreground">ankit@example.com</p>
               <div className="flex gap-2">
-                <Button variant="outline">Change password</Button>
+                <Button  className="bg-[#4F46BA] text-white">Change password</Button>
                 <Button
                   onClick={() => {
                     setIsProfileOpen(false);
@@ -67,6 +68,7 @@ const ProfileScetion = () => {
                   Edit profile
                 </Button>
               </div>
+              <Button onClick={() => signOut()}>Logout</Button>
             </div>
           </DialogContent>
         </Dialog>
@@ -126,7 +128,7 @@ const ProfileScetion = () => {
                 <Label htmlFor="about">About you</Label>
                 <Textarea id="about" />
               </div>
-              <Button type="submit">Update changes</Button>
+              <Button type="submit" className="bg-[#4F46BA]">Update changes</Button>
             </form>
           </DialogContent>
         </Dialog>
